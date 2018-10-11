@@ -71,7 +71,7 @@ class Blockchain {
     let isValidBlock = false
     let blockHeight = await dataBase.getBlockHeightFromDB()
 
-    for (let i = 0; i < blockHeight; i++) {
+    for (let i = 0; i <= blockHeight; i++) {
       this.getBlock(i).then((block) => {
         isValidBlock = this.validateBlock(block.height)
 
